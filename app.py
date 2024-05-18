@@ -16,19 +16,31 @@ def exibir_nome_programa():
       """)
 
 def exibir_opcoes():
+    '''
+        Função quando chamada exibe uma lista de opções.
+    '''
     print('1. Cadastrar restaurante')
     print('2. Listar restaurante')
     print('3. Alterar o estado do restaurante')
     print('4. Sair \n')
 
 def finalizar_app():
+    '''
+        Função quando chamada finaliza a execução do app.
+    '''
     exibir_subtitulos('Fializando app')
 
 def opcao_invalida():
+    '''
+        Função quando chamada exibe uma mensagem de opção inválida.
+    '''
     exibir_subtitulos('Opção inválida!')
     voltar_menu_principal()
 
 def exibir_subtitulos(texto):
+    '''
+        Função quando chamada exibe subtitulo da opção escolhida.
+    '''
     os.system('clear')
     linha = '*' * len(texto)
     print(linha)
@@ -37,6 +49,9 @@ def exibir_subtitulos(texto):
     print()
 
 def cadastrar_novo_restaurante():
+    '''
+        Função quando cadastra um restaurante.
+    '''
     exibir_subtitulos('Cadastrar de novos restaurantes')
 
     nome_do_restaurante = input('Digite o nome do restaurante que deseja cadastrar: ')
@@ -51,6 +66,9 @@ def cadastrar_novo_restaurante():
     voltar_menu_principal()
 
 def listar_restaurantes():
+    '''
+        Função quando chamada exibe  a lista de restaurantes cadastrado.
+    '''
     exibir_subtitulos('Listar restaurantes')
     print(f'Nome do restaurante'. ljust(22), f'|categoria'.ljust(22), f'|estado')
     for restaurante in restaurantes:
@@ -66,6 +84,9 @@ def voltar_menu_principal():
     main()
 
 def alternar_estado_restaurante():
+    '''
+        Função quando chamada altera o estado do restaurante.
+    '''
     exibir_subtitulos('Alterando estado do restaurante')
 
     nome_restaurante = input('Digite o nome do restaurante alterar o estado: ')
@@ -84,6 +105,9 @@ def alternar_estado_restaurante():
     voltar_menu_principal()
 
 def escolher_opcao():
+    '''
+        Função quando chamada você escolhe uma opção do app.
+    '''
     try:
         opcao_escohilhida = int(input('Digite uma opção: '))
         print(f'Você escolheu a opção: {opcao_escohilhida}!')
